@@ -1,18 +1,22 @@
 <script setup lang="ts">
 
 import Hello from "./components/hello.vue";
-import SvgIcon  from "./components/SvgIcon/index.vue"
+
 </script>
 
 <template>
   <div>
-  <p> ni hao </p>
+  <h1> ni hao </h1>
       <hello></hello>
-    <SvgIcon></SvgIcon>
+    <SvgIcon name="phone" color="pink" width="300px" height="300px"></SvgIcon>
   </div>
 
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+div{
+  h1{
+    color:$color;
+  }
+}
 </style>
