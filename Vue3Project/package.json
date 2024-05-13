@@ -11,7 +11,7 @@
     "build:pro": "vue-tsc && vite build --mode .env.production"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.4.0",
     "element-plus": "^2.7.2",
     "mockjs": "^1.1.0",
     "vue": "^3.4.21"
