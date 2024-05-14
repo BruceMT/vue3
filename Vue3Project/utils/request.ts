@@ -19,6 +19,35 @@ request.interceptors.response.use((response)=>{
    return response.data
 },(error)=>{
    //失败的回调:处理http  网络错误
-
+   let message  =  '';
+   let status = error.response.status;
+   switch (status) {
+      case 401:
+         message =  "TOKEN过期"
+         break;
+      case 403:
+         message = "无权限访问"
+         break;
+      case 404:
+         message = "地址错误"
+         break;
+      case 500:
+         message = "服务器错误"
+         break;
+      default:
+         message = "网络问题"
+         break;
+   }
+   //提示错误信息
+   ElMessage(
+       {
+          type:'error',
+          message
+       }
+   );
+   return Promise.reject(error);
 
 })
+
+//暴露
+export default request;

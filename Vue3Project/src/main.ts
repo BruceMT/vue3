@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import 'virtual:svg-icons-register'
 import SvgIcon  from "./components/SvgIcon/index.vue"
 import App from './App.vue'
-
+import "element-plus/theme-chalk/el-message-box.css";
+import "element-plus/theme-chalk/el-message.css";
 const app = createApp(App)
 /*//第一种单个注册全局组件方法
 app.component('SvgIcon',SvgIcon);*/
