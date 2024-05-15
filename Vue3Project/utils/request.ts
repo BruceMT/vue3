@@ -10,12 +10,14 @@ let request =  axios.create({
 
 //request 实例添加请求与响应拦截器
 request.interceptors.request.use(  (config)=>{
-
+//这里可以往 请求头里增加参数 例如 config.headers.token  = '123'
    return config
 })
 //相应拦截器
 request.interceptors.response.use((response)=>{
    //成功的回调
+
+
    return response.data
 },(error)=>{
    //失败的回调:处理http  网络错误
