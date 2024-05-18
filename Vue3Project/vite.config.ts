@@ -30,6 +30,12 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         }),
 
       ],
+      resolve:{
+        alias:{
+          "@": path.resolve("./src")
+        }
+      },
+
       //scss全局变量配置
       css:{
         preprocessorOptions:{
